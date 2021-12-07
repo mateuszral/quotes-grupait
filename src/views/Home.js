@@ -9,14 +9,14 @@ const apiUrl =
 const Home = () => {
   const [quotes, setQuotes] = useState([]);
   const [currentQuote, setCurrentQuote] = useState(null);
-  const [previousQoute, setPreviousQoute] = useState(null);
+  const [previousQuote, setPreviousQuote] = useState(null);
 
-  const drawRandomQoute = () => {
+  const drawRandomQuote = () => {
     if (currentQuote) {
-      setPreviousQoute(currentQuote);
+      setPreviousQuote(currentQuote);
     }
-    const qoute = quotes[Math.round(Math.random() * quotes.length + 1)];
-    setCurrentQuote(qoute);
+    const quote = quotes[Math.round(Math.random() * quotes.length)];
+    setCurrentQuote(quote);
   };
 
   useEffect(() => {
@@ -24,25 +24,25 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    drawRandomQoute();
+    drawRandomQuote();
   }, [quotes]);
 
   const handleButtonClick = (type) => {
     if (type === 'previous') {
-      setCurrentQuote(previousQoute);
+      setCurrentQuote(previousQuote);
     } else {
-      drawRandomQoute();
+      drawRandomQuote();
     }
   };
 
   return (
     <Wrapper>
-      <Heading>Qoutes</Heading>
+      <Heading>Quotes</Heading>
       {currentQuote ? (
         <>
           <div>
             <Button
-              disabled={!previousQoute || currentQuote === previousQoute}
+              disabled={!previousQuote || currentQuote === previousQuote}
               onClick={() => handleButtonClick('previous')}
             >
               Previous

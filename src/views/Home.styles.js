@@ -4,9 +4,12 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 50%;
-  margin: 0 auto;
   padding: 20px;
+
+  ${({ theme }) => theme.mq.tablet} {
+    width: 50%;
+    margin: 0 auto;
+  }
 `;
 
 export const Heading = styled.h1`
