@@ -1,8 +1,8 @@
 {
+  "homepage": "https://mateuszral.github.io/task3-grupait",
   "name": "react-template",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://mateuszral.github.io/task3-grupait",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
