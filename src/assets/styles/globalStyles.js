@@ -18,6 +18,7 @@ const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
     font-size: 1.6rem;
+    font-family: 'Lato', sans-serif;
   }
 
   h1, h2, h3, h4, h5, span {
@@ -27,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
   button {
     padding: 0;
     cursor: pointer;
+    font-family: 'Lato', sans-serif;
   }
 
   ul {

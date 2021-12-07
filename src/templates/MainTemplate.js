@@ -9,7 +9,7 @@ import { theme } from 'assets/styles/theme';
 
 const MainTemplate = ({ children }) => (
   <>
-    <Helmet lang="pl" title="React template" />
+    <Helmet lang="pl" title="Qoutes" />
     <GlobalStyles />
     <ThemeProvider theme={theme}>{children}</ThemeProvider>
   </>
